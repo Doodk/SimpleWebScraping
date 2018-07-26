@@ -37,3 +37,4 @@ myli = GetPageHTMLFromIndexPage("http://news.qq.com/", ".head > .Q-tpList .text 
 for eachli in myli:
     print(eachli)
     print('\n')
+    
