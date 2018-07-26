@@ -20,7 +20,7 @@ def GetTagAttribAndContent(tagHTML, attrib="href"):
 
 # Combine Function:
 # Get link list from first page, then scrape content inside each link
-def GetPageHTMLFromIndexPage(mainUrl, mainSelectorRule, subSelectorRule, discardBlank=False):
+def GetPageHTMLFromIndexPage(mainUrl, mainSelectorRule, subSelectorRule, discardBlank=True):
     ret = []
     subPage = GetHTMLbySelectDOM(mainUrl, mainSelectorRule)
     for link in subPage:
@@ -33,7 +33,7 @@ def GetPageHTMLFromIndexPage(mainUrl, mainSelectorRule, subSelectorRule, discard
     return ret
 
 # sample testing code
-myli = GetPageHTMLFromIndexPage("http://news.qq.com/", ".head > .Q-tpList .text .linkto", ".content-article, .Cnt-Main-Article-QQ", False)
+myli = GetPageHTMLFromIndexPage("http://news.qq.com/", ".head > .Q-tpList .text .linkto", ".content-article, .Cnt-Main-Article-QQ", True)
 for eachli in myli:
     print(eachli)
     print('\n')
