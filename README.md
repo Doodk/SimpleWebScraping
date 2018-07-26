@@ -24,4 +24,9 @@ A simple function for scraping web page for a website.
 
 #### Sample:
 
-    GetPageHTMLFromIndexPage("http://news.qq.com/", ".head > .Q-tpList .text .linkto", ".content-article, .Cnt-Main-Article-QQ", False)
+    GetPageHTMLFromIndexPage(
+        "http://news.qq.com/", 
+        ".head > .Q-tpList .text .linkto", 
+        ".content-article, .Cnt-Main-Article-QQ", 
+        False
+    )
