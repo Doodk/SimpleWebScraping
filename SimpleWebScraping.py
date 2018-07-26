@@ -1,34 +1,9 @@
 #Title: SimpleWebScraping
 # Ver 1.1
 # Author: Doodk
-#
 # Create Date: July 25, 2018
 # Last Modify Date: July 26, 2018
-#
-# Dependency: requests, BeautifulSoup(beautifulsoup4), lxml
-# To install:
-#   >> $ pip install beautifulsoup4
-#   >> $ pip install requests
-#   >> $ pip install lxml
-#
-# Usage:
-# GetPageHTMLFromIndexPage("http://news.qq.com/", ".head > .Q-tpList .text
-#           .linkto", ".content-article, .Cnt-Main-Article-QQ", False)
-# GetPageHTMLFromIndexPage(mainUrl, mainSelectorRule, subSelectorRule,
-#           discardBlank=False)
-#   mainUrl:
-#       The first web url, which contain url/title list for the articles
-#   mainSelectorRule:
-#       The CSS select rule, to specific the <a> tag position in the first web
-#       page
-#   subSelectorRule:
-#       The CSS select rule, to specific the content position in the articles
-#       web page
-#   discardBlank [Default=False]:
-#       Whether discard the null result from scraping the articles (this may
-#       cause by incorrect css selector, web page lazy load, etc.)
-#
-#
+
 import requests
 from bs4 import BeautifulSoup
 
@@ -57,8 +32,7 @@ def GetPageHTMLFromIndexPage(mainUrl, mainSelectorRule, subSelectorRule, discard
             ret.append([title, subUrl, ""])
     return ret
 
-
-
+# sample testing code
 myli = GetPageHTMLFromIndexPage("http://news.qq.com/", ".head > .Q-tpList .text .linkto", ".content-article, .Cnt-Main-Article-QQ", False)
 for eachli in myli:
     print(eachli)
