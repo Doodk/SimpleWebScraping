@@ -20,7 +20,7 @@ A simple function for scraping web page for a website.
 * **mainUrl**: The first web url, which contain url/title list for the articles
 * **mainSelectorRule**: The CSS select rule, to specific the <a> tag position in the first web page
 * **subSelectorRule**:The CSS select rule, to specific the content position in the articlesweb page
-* **discardBlank** *[Default=False]*: Whether discard the null result from scraping the articles (this maycause by incorrect css selector, web page lazy load, etc.)<br>
+* **discardBlank** *[Default=True]*: Whether discard the null result from scraping the articles (this maycause by incorrect css selector, web page lazy load, etc.)<br>
 
 #### Sample:
 
